@@ -37,3 +37,17 @@ Este projeto foi desenvolvido para praticar a construção de páginas web, a ma
 ## 👩‍💻 Autoria
 
 Projeto pessoal desenvolvido para fins de aprendizado e composição de portfólio.
+
+## 📸 Capturas de tela
+
+### Formulário de cadastro
+![Consumo Claro - Formulário](imagens/formulario.png)
+
+### Comparação de consumo
+![Consumo Claro - Comparaçã-A](imagens/comparacao-a.png)
+
+### Comparação de consumo
+![Consumo Claro - Comparação-B](imagens/comparacao-b.png)
+
+### Apagar histórico
+![Consumo Claro - Apagar Histórico](imagens/apagar-historico.png)
