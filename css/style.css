@@ -123,3 +123,69 @@ footer {
         width: 100%;
     }
 }
+
+/* Organização do histórico de consumo */
+#lista-consumo {
+    margin-top: 20px;
+}
+
+#lista-consumo p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Espaçamento entre as seções */
+section {
+    margin-bottom: 30px;
+}
+
+/* Destaque ao passar o mouse pelos botões */
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Destaque do resultado da comparação */
+#resultado-comparacao {
+    background-color: #f0f7f2;
+    border-left: 4px solid #2e7d32;
+    padding: 15px;
+    border-radius: 6px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Cores do resultado da comparação */
+#resultado-comparacao.aumento {
+    background-color: #fff0f0;
+    border-left-color: #c62828;
+}
+
+#resultado-comparacao.reducao {
+    background-color: #eaf7ed;
+    border-left-color: #2e7d32;
+}
+
+#resultado-comparacao.estavel {
+    background-color: #f0f4f8;
+    border-left-color: #607d8b;
+}
+
+/* Cartões do histórico de consumo */
+.registro-consumo {
+    background-color: #ffffff;
+    border: 1px solid #dce5df;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.registro-consumo p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
