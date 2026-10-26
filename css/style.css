@@ -1,3 +1,4 @@
+
 /* Configurações gerais */
 * {
     margin: 0;
@@ -25,6 +26,45 @@ header h1 {
     margin-bottom: 8px;
 }
 
+/* Conteúdo do cabeçalho */
+.cabecalho-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cabecalho-texto {
+    width: 100%;
+    text-align: center;
+}
+
+/* Medidor de energia 3D */
+.medidor-3d {
+    display: block;
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    margin: 0 auto;
+    animation: flutuar-medidor 3s ease-in-out infinite;
+}
+
+/* Animação do medidor */
+@keyframes flutuar-medidor {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 /* Conteúdo principal */
 main {
     max-width: 1000px;
@@ -50,6 +90,7 @@ main {
     margin-bottom: 20px;
 }
 
+/* Campos do formulário */
 .campo {
     margin-bottom: 18px;
 }
@@ -74,7 +115,7 @@ main {
     border-color: #2878B5;
 }
 
-/* Botão principal */
+/* Botões */
 button {
     background-color: #2878B5;
     color: #FFFFFF;
@@ -84,6 +125,7 @@ button {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -95,6 +137,76 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
+/* Espaçamento entre as seções */
+section {
+    margin-bottom: 30px;
+}
+
+/* Histórico de consumo */
+#lista-consumo {
+    margin-top: 20px;
+    color: #263238;
+}
+
+#lista-consumo p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #263238;
+}
+
+/* Cartões dos registros */
+.registro-consumo {
+    background-color: #FFFFFF;
+    color: #263238;
+    border: 1px solid #DCE5DF;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.registro-consumo p {
+    margin: 8px 0;
+    line-height: 1.5;
+    color: #263238;
+}
+
+.registro-consumo strong {
+    color: #263238;
+}
+
+/* Resultado da comparação */
+#resultado-comparacao {
+    background-color: #F0F7F2;
+    color: #263238;
+    border-left: 4px solid #2E7D32;
+    padding: 15px;
+    border-radius: 6px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Comparação com aumento de consumo */
+#resultado-comparacao.aumento {
+    background-color: #FFF0F0;
+    border-left-color: #C62828;
+    color: #263238;
+}
+
+/* Comparação com redução de consumo */
+#resultado-comparacao.reducao {
+    background-color: #EAF7ED;
+    border-left-color: #2E7D32;
+    color: #263238;
+}
+
+/* Comparação com consumo estável */
+#resultado-comparacao.estavel {
+    background-color: #F0F4F8;
+    border-left-color: #607D8B;
+    color: #263238;
+}
+
 /* Rodapé */
 footer {
     background-color: #E5ECF2;
@@ -104,7 +216,7 @@ footer {
     margin-top: 30px;
 }
 
-/* Adaptação para telas pequenas */
+/* Ajustes para telas pequenas */
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.6rem;
@@ -119,73 +231,15 @@ footer {
         padding: 18px;
     }
 
+    .cabecalho-conteudo {
+        gap: 15px;
+    }
+
+    .medidor-3d {
+        max-width: 150px;
+    }
+
     button {
         width: 100%;
     }
-}
-
-/* Organização do histórico de consumo */
-#lista-consumo {
-    margin-top: 20px;
-}
-
-#lista-consumo p {
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-/* Espaçamento entre as seções */
-section {
-    margin-bottom: 30px;
-}
-
-/* Destaque ao passar o mouse pelos botões */
-button {
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-/* Destaque do resultado da comparação */
-#resultado-comparacao {
-    background-color: #f0f7f2;
-    border-left: 4px solid #2e7d32;
-    padding: 15px;
-    border-radius: 6px;
-    line-height: 1.6;
-    margin-top: 15px;
-}
-
-/* Cores do resultado da comparação */
-#resultado-comparacao.aumento {
-    background-color: #fff0f0;
-    border-left-color: #c62828;
-}
-
-#resultado-comparacao.reducao {
-    background-color: #eaf7ed;
-    border-left-color: #2e7d32;
-}
-
-#resultado-comparacao.estavel {
-    background-color: #f0f4f8;
-    border-left-color: #607d8b;
-}
-
-/* Cartões do histórico de consumo */
-.registro-consumo {
-    background-color: #ffffff;
-    border: 1px solid #dce5df;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.registro-consumo p {
-    margin: 8px 0;
-    line-height: 1.5;
 }
